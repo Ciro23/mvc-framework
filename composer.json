@@ -1,0 +1,23 @@
+{
+    "name": "ciro23/mvc-framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ciro Sorre"
+        }
+    ],
+
+    "require": {
+        "php": ">= 5.2",
+        "vlucas/phpdotenv": "^5.1"
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+          "Mvc\\": "src/"
+        }
+    },
+
+    "minimum-stability": "dev"
+}
