@@ -4,6 +4,7 @@ namespace Mvc;
 
 class Controller {
 
+    public static $modelSuffix = "Model";
     public static $viewsPath = "/app/views/";
     public static $viewsSuffix = ".view.php";
 
@@ -15,7 +16,7 @@ class Controller {
     * @return object $model
     */
     protected function model($model) {
-        $model .= "Model";
+        $model .= Controller::$modelSuffix;
         $model = ucfirst($model);
         return new $model();
     }
