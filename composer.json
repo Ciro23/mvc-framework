@@ -1,5 +1,6 @@
 {
     "name": "ciro23/mvc-framework",
+    "description": "Simple MVC framework with a default Controller, Model and Dbh",
     "type": "library",
     "license": "MIT",
     "authors": [
