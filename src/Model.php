@@ -5,13 +5,13 @@ namespace Mvc;
 class Model extends Dbh {
 
     /**
-    * executes an SQL query
-    *
-    * @param string $sql, the SQL statement
-    * @param array $inParameters, the input parameters
-    *
-    * @return PDOStatement|false, first in case of success, false otherwise
-    */
+     * executes an SQL query
+     *
+     * @param string $sql, the SQL statement
+     * @param array $inParameters, the input parameters
+     *
+     * @return PDOStatement|false, first in case of success, false otherwise
+     */
     protected function executeStmt($sql, $inParameters = []) {
         try {
             $stmt = $this->connect();

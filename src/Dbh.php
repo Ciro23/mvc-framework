@@ -3,26 +3,26 @@
 namespace Mvc;
 
 class Dbh {
-    
+
     /**
-    * @var bool $error, is set to true in case of PDO error
-    */
+     * @var bool $error, is set to true in case of PDO error
+     */
     public $error = false;
 
     /**
-    * @var string, required for the database connection
-    */
+     * @var string, required for the database connection
+     */
     private $dbServerName;
     private $dbUsername;
     private $dbPassword;
     private $dbName;
     private $charset;
-    
+
     /**
-    * connects to the database
-    *
-    * @return PDO, the db connection object
-    */
+     * connects to the database
+     *
+     * @return PDO, the db connection object
+     */
     protected function connect() {
         $this->dbServerName = $_ENV['dbServerName'];
         $this->dbUsername = $_ENV['dbUsername'];
@@ -34,7 +34,7 @@ class Dbh {
         try {
             $dbh = new \PDO($dsn, $this->dbUsername, $this->dbPassword);
             $dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        } catch(\PDOException $e) {
+        } catch (\PDOException $e) {
             throw $e;
         }
 
