@@ -22,4 +22,14 @@ class Model extends Dbh {
         }
         return $stmt;
     }
+    
+    /**
+     * gets the last insert id
+     * 
+     * @return int
+     */
+    protected function lastInsertId() {
+        $db = $this->connect();
+        return $db->lastInsertId();
+    }
 }
