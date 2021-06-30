@@ -5,9 +5,9 @@ namespace Mvc;
 class Dbh {
 
     /**
-     * @var bool $PDOError, is set to true in case of PDO error
+     * @var bool $error, is set to true in case of PDO error
      */
-    public $PDOError = false;
+    public $error = false;
 
     /**
      * @var string, required for the database connection
